@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.giago</groupId>
+    <artifactId>appengine</artifactId>
+    <version>1.3</version>
+  </parent>
+  <artifactId>shortcut-finder</artifactId>
+  <version>1.1</version>
+  <packaging>war</packaging>
+  <name>shortcut-finder</name>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>net.kindleit</groupId>
+        <artifactId>maven-gae-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.datanucleus</groupId>
+        <artifactId>maven-datanucleus-plugin</artifactId>
+        <configuration>
+          <mappingIncludes>**/domain/*.class</mappingIncludes>
+          <verbose>false</verbose>
+          <enhancerName>ASM</enhancerName>
+          <api>JDO</api>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>gwt-maven-plugin</artifactId>
+        <configuration>
+          <value>com.la.shortcuts.shortcuts</value>
+        </configuration>
+        <executions>
+          <execution>
+            <configuration>
+              <runTarget>com.la.shortcuts/editor.jsp</runTarget>
+            </configuration>
+            <phase>compile</phase>
+            <goals>
+              <goal>compile</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

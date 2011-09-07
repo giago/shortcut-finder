@@ -1,0 +1,51 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="2.5">
+
+	<filter>
+		<filter-name>resultsFilter</filter-name>
+		<filter-class>com.la.shortcuts.server.filter.ResultsFilter</filter-class>
+	</filter>
+	<filter>
+		<filter-name>shortcutLoaderFilter</filter-name>
+		<filter-class>com.la.shortcuts.server.filter.ShortcutLoaderFilter</filter-class>
+	</filter>
+	<filter>
+		<filter-name>sitemapFilter</filter-name>
+		<filter-class>com.la.shortcuts.server.filter.SitemapFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>resultsFilter</filter-name>
+		<url-pattern>/</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>resultsFilter</filter-name>
+		<url-pattern>/shortcuts.jsp</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>shortcutLoaderFilter</filter-name>
+		<url-pattern>/shortcutDetails/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>sitemapFilter</filter-name>
+		<url-pattern>/sitemap.jsp</url-pattern>
+	</filter-mapping>
+
+	<servlet>
+		<servlet-name>shortcutServlet</servlet-name>
+		<servlet-class>com.la.shortcuts.server.ShortcutServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>shortcutServlet</servlet-name>
+		<url-pattern>/shortcuts/shortcut</url-pattern>
+	</servlet-mapping>
+
+	<error-page>
+		<error-code>404</error-code>
+		<location>/search.jsp</location>
+	</error-page>
+
+	<welcome-file-list>
+		<welcome-file>shortcuts.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+sitemap: http://shortcut-finder.appspot.com/sitemap.jsp

@@ -1,0 +1,105 @@
+<style>
+body, table td, select { font-family: Arial Unicode MS, Arial, sans-serif; font-size: small; }
+pre { font-family: "courier new", courier; font-size: small; }
+body { color: black; margin: 0px; border: 0px; padding: 0px; background: #fff; direction: ltr; }
+
+h1 { font-size: 3em; font-weight: bold; color: #777777; margin: 5px 0px 5px; text-align: center; }
+.h1Link { text-decoration: none; color: #369;}
+.h1Link:link { text-decoration: none; color: #369;}
+.h1Link:visited{ text-decoration: none; color: #369;}
+.h1Link:active{ text-decoration: none; color: #369;}
+.h1Link:hover{ text-decoration: none; color: #369;}
+
+.sc-header{ height:30px; opacity:1; position:absolute; right:0; top:0; width:100%; border:#CCC solid 1px;}
+.sc-header a { color:#333333; cursor:pointer; text-decoration:none; white-space:nowrap; margin-top:6px; margin-left:20px; float:left; padding:3px;}
+.sc-headerRight { float:right; margin-rigth:20px; padding-right:20px;}
+a.sc-new { color:red; font-weight:bold; }
+.sc-footer{ margin-top:30px; padding-top:30px; text-align: center; width:100%; clear:both;}
+
+.sc-right {position:absolute; right:5px; top:55px;}
+.sc-leftTop { position: absolute; top: 55px; left: 15px; float: left;}
+.sc-leftBottom { position: absolute; bottom: 35px; left: 15px; float: left;}
+.sc-leftTitle{ margin-top:15px; margin-bottom:0px; padding-bottom:0px;}
+
+.sc-title { margin-top:35px; color:#AA1002;}
+
+.sc-navigation { width:140px; }
+.sc-navigationNext { float:right; border:1px solid #CCCCCC; margin:10px; padding-left:5px;padding-right:5px; background-color: #F0F0F0;}
+.sc-navigationNext a { color:black; text-decoration: none;}
+.sc-navigationPrevious { float:left; border:1px solid #CCCCCC; margin:10px; padding-left:5px;padding-right:5px; background-color: #F0F0F0;}
+.sc-navigationPrevious a { color:black; text-decoration: none;}
+
+.sendButton { display: block; font-size: 16pt; }
+.gwt-DialogBox { width: 400px; }
+.dialogVPanel { margin: 5px; }
+.serverResponseLabelError { color: red; }
+#closeButton { margin: 15px 6px 6px; }
+
+.sc-staticContentContainer{ align:center; width:55%; text-align:justify; }
+.sc-staticContentTitle { margin:10px;}
+.sc-staticContent { margin:10px; }
+
+.sc-results { width:65%;}
+.sc-result { width:100%; margin-bottom:7px; float:left; }
+.sc-result:hover { width:100%; margin-bottom:7px; float:left; background-color:#F0F0F0; }
+.sc-resultTool { color:#808080; font-size:small; }
+.sc-resultTool a { color:green; color:#808080; font-size:small; }
+.sc-resultPlatform {float:right;}
+
+.sc-resultKeys { width:20%; font-weight:bold; color:blue; text-decoration:none; float:left; text-align:left;}
+.sc-resultDescription { width:65%; float:left; text-align:left;}
+.sc-resultVotes { width:3%; color:green; margin-top:3px; float:left;}
+
+.sc-shortcut { width:62%; }
+.sc-field h1 { text-align:left;}
+.sc-shortcut h1 { font-size:large; margin-top:40px; color:#AA1002; padding:3px; margin:3px;}
+.sc-shortcut h2 { color:green; padding:3px; margin:3px;}
+.sc-shortcut h2 a { color:green;}
+.sc-shortcut h4 { padding:3px; margin:3px;}
+.sc-label { width:18%; text-align:left; float:left; padding:3px; margin:3px;}
+.sc-field { width:78%; text-align:left; float:left; }
+.sc-row { width:62%px; height:40px; }
+.sc-rowBig { width:62%px;  height:70px; }
+
+.sc-createShortcutContainer { width:70%; }
+.sc-formShortcut { width:49%; float:left; }
+.sc-searchShortcut { width:49%; float:right; }
+
+.sc-editorResult { }
+.sc-editorResultKeys { color:blue; float:left; width:33%; text-align:left;}
+.sc-editorResultTool { color:green; float:left; width:33%; text-align:left;}
+.sc-editorResultPlatform { color:red; float:left; width:33%; text-align:left;}
+.sc-editorResultDescription { float:left; margin-top:3px; text-align:left; width:100%; border-bottom:1px solid #CCCCCC; margin-bottom:10px;}
+
+.sc-commentContainer { width:62%;}
+.sc-commentFrame { height: 500px; border: 0px; margin: 40px 0px 0px 0px; width:550px;}
+
+
+.sc-shortcutRowTitle { margin-top:20px; margin-bottom:5px;}
+.sc-rightRowContent { }
+
+.sc-starButton{ cursor:pointer; font-family:"Comic Sans MS"; font-size: 18pt; font-weight: bold; color:#cccccc; margin:0px 10px 0px 0px; float:right; text-align:center; width:50px;}
+.sc-ratingButton{ cursor:pointer; color:green; margin:0px 10px 0px 0px; font-weight: bold; float:right; text-align:center; width:50px;}
+.sc-button{ margin-top:2px; padding:1px 3px 2px 3px; cursor:pointer; color:#ccccc; text-color:#00000; border:1px solid #cccccc; float:left;}
+.sc-pageButton{ cursor:pointer; color:blue; margin:0px 10px 0px 0px; float:right; text-align:center; text-decoration: underline; width:50px;}
+
+.shortcutButton { text-decoration: none; }
+.add { background: url(images/add.gif) no-repeat 0px 2px; text-indent: 17px; display: block; }
+.gwt-DialogBox .dialogContent { text-align: center; }
+.imageButton { }
+.imageButton:hover{ background: url(images/promoteUp.png); }
+.smallLabel { font-size: 10pt; color: #C0C0C0; }
+
+.customDialogBox .Caption { background: #e3e8f3; padding: 4px 4px 4px 8px; cursor: default; border-bottom: 1px solid #bbbbbb; border-top: 5px solid #d0e4f6; }
+.customDialogBox .dialogMiddleCenter { padding: 3px; background: white; }
+.customDialogBox .dialogTopLeftInner { width: 5px; zoom: 1; }
+.customDialogBox .dialogTopRightInner { width: 8px; zoom: 1; }
+.customDialogBox .dialogBottomLeftInner { width: 5px; height: 8px; zoom: 1; }
+.customDialogBox .dialogBottomRightInner { width: 5px; height: 8px; zoom: 1; }
+* html .customDialogBox .dialogTopLeftInner { width: 5px; overflow: hidden; }
+* html .customDialogBox .dialogTopRightInner { width: 8px; overflow: hidden; }
+* html .customDialogBox .dialogBottomLeftInner { width: 5px; height: 8px; overflow: hidden; }
+* html .customDialogBox .dialogBottomRightInner { width: 8px; height: 8px; overflow: hidden; }
+
+#ccsif { width: 100%; height: 500px; border: 0px; margin: 20px 0px 0px 0px; }
+</style>

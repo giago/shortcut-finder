@@ -1,0 +1,11 @@
+<!-- Indices written at Wed, 31 Mar 2010 09:21:01 UTC -->
+
+<datastore-indexes>
+
+    <!-- Used 1 time in query history -->
+    <datastore-index kind="ShortcutJDO" ancestor="false" source="auto">
+        <property name="approved" direction="asc"/>
+        <property name="votes" direction="desc"/>
+    </datastore-index>
+
+</datastore-indexes>
